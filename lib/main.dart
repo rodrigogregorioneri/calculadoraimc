@@ -19,9 +19,11 @@ class _HomeState extends State<Home> {
   TextEditingController heightController = TextEditingController();
 
   void resetFields() {
-    weightController.text = "";
-    heightController.text = "";
-    _infoText = "Informe seus dados!";
+    setState(() {
+      weightController.text = "";
+      heightController.text = "";
+      _infoText = "Informe seus dados!";
+    });
   }
 
   void calculate() {
